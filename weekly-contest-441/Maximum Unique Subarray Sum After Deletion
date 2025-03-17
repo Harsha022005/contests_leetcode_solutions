@@ -1,0 +1,7 @@
+class Solution:
+    def maxSum(self, nums: list[int]) -> int:
+        maxi=max(nums)
+        if maxi<0:
+            return maxi //if maximum is less than 0 then the negative element must be returned
+        tot=sum({num for num in nums if num>0})  //all positve elements are added by considering unique elements only 
+        return tot
